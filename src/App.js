@@ -7,7 +7,7 @@ import './style.css';
 const Wrapper = styled.div`
   background-color: white;
   margin: 0 auto;
-  padding: 2em;
+  padding: 2.2em;
   max-width: 600px;
 `
 
