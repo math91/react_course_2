@@ -35,19 +35,19 @@ function Arena() {
   }, [value])
 
   function double(num) {
-    console.log("Calling double")
+    // console.log("Calling double")
       return num * 2
   }
 
 // useCallback for buying hot dogs
   const buyHotDog = useCallback(() => {
-    console.log("Calling buy")
+    // console.log("Calling buy")
     setHotDog(sum => sum + 1)
   }, [setHotDog])
 
   useEffect(() => {
     buyHotDog()
-    console.log("Calling useeffect")
+    // console.log("Calling useeffect")
   }, [buyHotDog])
 
   return (
@@ -59,11 +59,28 @@ function Arena() {
         value={value}
         onChange={handleChange}
       />
-      <p><Button onClick={handleClick}>Change ground</Button></p>
-      <Ground style={{ backgroundColor: ground ? 'orange' : 'green' }}><h2>{ground ? 'sand' : 'grass' }</h2></Ground>
+      <p>
+        <Button
+          onClick={handleClick}
+        >
+          Change ground
+        </Button>
+      </p>
+      <Ground
+        style={{ backgroundColor: ground ? 'orange' : 'green' }}
+      >
+        <h2>{ground ? 'sand' : 'grass' }</h2>
+      </Ground>
       <h2>Good to Know</h2>
       <p>You need to buy at least {doubleNumber} hot dogs</p>
-      <p><Button data-testid="buy-hotdog" onClick={buyHotDog}>Buy hot dog</Button></p>
+      <p>
+        <Button
+          data-testid="buy-hotdog"
+          onClick={buyHotDog}
+        >
+          Buy hot dog
+        </Button>
+      </p>
       <p>You have <span data-testid="sum-hotdogs">{hotDog}</span> hot dogs</p>
     </>
   )

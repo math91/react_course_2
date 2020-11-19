@@ -1,6 +1,5 @@
 import React, {useState, useEffect} from "react"
 import {useTeam} from "./teamContext"
-import styled from "styled-components"
 import { Button } from "./buttons"
 
 function PickPlayers() {

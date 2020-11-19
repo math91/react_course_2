@@ -44,9 +44,17 @@ function Lineup() {
       <img src={item.img} alt="A dog" height="100px"/>
       <p>
         {item.speed ?
-          <ButtonRed onClick={() => removeSpeed(item.img)}>Remove extra speed</ButtonRed>
+          <ButtonRed
+            onClick={() => removeSpeed(item.img)}
+          >
+              Remove extra speed
+          </ButtonRed>
           :
-          <ButtonGreen onClick={() => addSpeed(item.img)}>Give extra speed</ButtonGreen>
+          <ButtonGreen
+            onClick={() => addSpeed(item.img)}
+          >
+            Give extra speed
+          </ButtonGreen>
         }
       </p>
     </Li>)

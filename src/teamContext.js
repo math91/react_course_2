@@ -15,7 +15,7 @@ export function TeamProvider(props) {
 export function useTeam() {
   const context = useContext(TeamContext)
   if (!context) {
-    throw new Error("useTeam must be used in a cartprovider. Wrap av paret compnent i cartprvider to fix this error.")
+    throw new Error("useTeam must be used in a cartprovider. Wrap av parent component in cartprovider to fix this error.")
   }
   return context
 }

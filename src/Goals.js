@@ -42,7 +42,7 @@ function Goals() {
   return (
     <>
       <div id="playGame">
-        <h2>How many goals do you want your opponent to do?</h2>
+        <h2>How many goals do you want your opponent to score?</h2>
         <p data-testid="goals">{state.count} goals</p>
         <Button onClick={decrement}>-</Button>
         <Button onClick={increment}>+</Button>
